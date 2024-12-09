@@ -1,0 +1,619 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #d6b59a;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 7px 14% 9px 0;
+    width: 100%;
+    background-color: #f2e1d4;
+}
+
+header h1 {
+    margin-right: 65%;
+    cursor: pointer;
+    background-image: linear-gradient(to top left, #6f4c3e 32%, #555 12%);
+    background-clip: text;
+    color: transparent;
+    font-size: 1.8rem;
+    z-index: 1;
+}
+
+header .logo-card {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: -1.5rem;
+    left: 14.8rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+
+/* card order */
+nav ul .quantitys {
+    position: absolute;
+    top: .3rem;
+    right: 10.6rem;
+    background-color: rgba(255, 0, 0, 0.876);
+    color: #f2e1d4;
+    border-radius: 50%;
+    text-align: center;
+    width: 22px;
+    height: 22px;
+    display: none;
+}
+
+nav ul .card-shopping {
+    position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: grey;
+    z-index: 2;
+    transition: 1s ease-in-out;
+}
+
+nav ul .card-shopping {
+    transform: translateX(350px);
+    padding: 0 .5rem;
+}
+
+nav ul .card-shopping.active {
+    transform: translateX(0px);
+}
+
+nav ul .card-shopping .card-title {
+    margin: .8rem 0 0 1rem;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-size: 21.5px;
+    text-align: center;
+}
+
+nav ul .card-shopping .list-card-shopping .card-product {
+    margin-top: .5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 110px;
+}
+
+nav ul .card-shopping .list-card-shopping .card-product .detail-product {
+    place-self: start;
+    margin: 1px 0 0 1rem;
+    color: white;
+}
+
+nav ul .card-shopping .list-card-shopping .card-product .detail-product p {
+    padding: 2px;
+    margin: 10px 0 0 0;
+    font-size: .9rem;
+}
+
+nav ul .card-shopping .list-card-shopping .card-product .detail-product .name-product {
+    width: 150px;
+    font-size: .9rem;
+}
+
+nav ul .card-shopping .list-card-shopping .card-product .detail-product .jumlah {
+    font-size: .9rem;
+    display: flex;
+}
+
+nav ul .card-shopping .list-card-shopping .card-product .detail-product .jumlah p {
+    padding-left: 10px;
+}
+
+nav ul .card-shopping .list-card-shopping .card-product .detail-product .jumlah button {
+    padding: 2px;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    width: 1.8rem;
+    margin: .6rem .1rem 0 0;
+    cursor: pointer;
+    border: none;
+}
+nav ul .card-shopping .list-card-shopping .card-product .detail-product .jumlah button.plus {
+    margin-left: .6rem;
+}
+
+nav ul .card-shopping .list-card-shopping .card-product img {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    margin: 1rem 0 0 8px;
+    object-fit: cover;
+    box-shadow: 5px 4px 4px #6f4c3e;
+}
+
+nav ul .card-shopping .list-card-shopping .card-product .fa-trash {
+    font-size: 1.3rem;
+    cursor: pointer;
+    place-self: center;
+    margin-left: -2.5rem;
+}
+
+nav ul .card-shopping .close-shopping {
+    background-color: white;
+    text-align: center;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 5px;
+    position: relative;
+    bottom: 0;
+    left: -10px;
+    min-width: 110%;
+    cursor: pointer;
+    margin: 3.5rem 0 2px;
+}
+
+
+nav ul .card-shopping .total {
+    display: flex;
+    justify-content: flex-start;
+    border-top: 2px solid black;
+    padding: .3rem .3rem 0 0;
+    margin-top: 1.2rem;
+}
+
+nav ul .card-shopping .total .total-title {
+    margin: 0 7.5rem 0 .5rem;
+    font-size: 1.1rem;
+}
+
+nav ul .card-shopping .btn-buy {
+    padding: 8px;
+    margin: .8rem 0;
+    text-transform: uppercase;
+    position: absolute;
+    left: 105px;
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    width: 80px;
+    background-color: #6f4c3e;
+    transition: .8s linear;
+}
+
+nav ul .card-shopping .btn-buy:hover {
+    background-color: #f2e1d4;
+}
+
+nav ul .open-shopping .fa-basket-shopping {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.5rem;
+    bottom: -7px;
+}
+
+nav ul .open-shopping {
+    text-transform: capitalize;
+}
+/* akhir card order */
+
+
+
+nav ul li a {
+    text-decoration: none;
+    color: #5e3a31;
+    margin-right: 1px;
+    padding: 6px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    transition: .5s ease-out;
+}
+
+nav ul li a::before {
+    content: '';
+    width: 0;
+    position: absolute;
+    background-color: #5e3a31;
+    height: 2px;
+    bottom: 0;
+    transition: .5s ease-in;
+}
+
+nav ul li a:hover::before {
+    width: 70%;
+}
+
+
+/* slider promo */
+.slider .list-slider .slider-item {
+    position: absolute;
+}
+
+.slider-item {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.slider-item.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.slider-item .slider-img img {
+    width: 100vw;
+    height: 80vh;
+}
+
+.slider .btn-next, .slider .btn-prev {
+    width: 45px;
+    height: 45px;
+    border: none;
+    background-color: transparent;
+    transform: rotate(45deg);
+    border: 2px solid grey;
+    transition: .2s linear;
+    overflow: hidden;
+}
+
+.slider .btn-next {
+    position: absolute;
+    top: 35%;
+    right: 1.7%;
+}
+
+.slider .btn-prev {
+    position: absolute;
+    top: 35%;
+    left: 1.7%;
+}
+
+.slider .btn-next i, .slider .btn-prev i {
+    padding: .1rem 0 .1rem .2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: grey;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-45deg);
+    transition: .2s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider .btn-prev i {
+    padding: .1rem .2rem .1rem 0;
+}
+
+.slider .btn-next:hover, .slider .btn-prev:hover{
+    background-color: grey;
+}
+
+.slider .btn-next i:hover, .slider .btn-prev i:hover {
+    color: black;
+}
+
+main .items .menu {
+    position: relative;
+    top: 460px;
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    gap: .8rem;
+    place-items: center;
+    padding: 0 9px;
+}
+/* akhir slider promo */
+
+
+/* filter product */
+.card-menu:nth-child(n+6) {
+    display: none;
+}
+
+.filters .indicator {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    top: 32.5rem;
+    left: 21.7rem;
+    max-width: 35rem;
+    height: 5rem;
+}
+
+.filters .indicator li[data-filter] {
+    list-style-type: none;
+    cursor: pointer;
+    margin: 0 8px;
+    padding: 9px;
+    color: white;
+    transition: .4s ease-in;
+    font-size: 1.1rem;
+}
+
+.filters .indicator li.active {
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.filters .indicator li.active::before {
+    content: '';
+    background-color: #5e3a31;
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    top: 3.35rem;
+    transition: .7s ease;
+}
+
+.filters .indicator li.active:hover::before {
+    width: 0px;
+}
+
+.filters .indicator li[data-filter]:hover {
+    color: black;
+}
+/* akhir filter */
+
+
+/* card menu */
+.items {
+    margin-top: 5rem;
+}
+
+.items .name-menu {
+    color: #f2e1d4;
+    position: absolute;
+    left: 34.8rem;
+    top: 34.7rem;
+    text-transform: uppercase;
+}
+
+.menu .card-menu {
+    border: 2px solid black;
+    border-radius: 5%;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #6f4c3e;
+    margin: 0 1rem;
+    height: 40vh;
+    width: 100%;
+}
+
+.menu .card-menu img {
+    width: 90%;
+    height: 50%;
+    transition: .5s linear;
+    margin: 1rem 0 0 .68rem;
+    border-radius: 5%;
+    object-fit: cover;
+}
+
+.menu .card-menu .nama-makanan, .menu .card-menu .harga-makanan {
+    color: white;
+    padding: 4px 8px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.menu .card-menu input {
+    color: black;
+    padding: 3px;
+    margin-left: 8px;
+    width: 30%;
+    border: none;
+    border-radius: 2px;
+}
+
+main .menu::after {
+    content: '';
+    background-color: red;
+    height: 100vh;
+    position: absolute;
+    top: 400px;
+}
+/* akhir card menu */
+
+
+/* preview product */
+.product-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-preview .preview {
+    display: none;
+    background-color: #c1a57b;
+    width: 25rem;
+    height: 29rem;
+    margin: 1.5rem;
+    padding: 1rem 0;
+    position: relative;
+    border-radius: 10px;
+}
+
+.product-preview .preview.active {
+    display: inline-block;
+}
+
+.product-preview .preview img {
+    height: 14.2rem;
+    width: 26.5vw;
+    border-radius: 20px;
+    margin: .5rem 0 0 -.5rem;
+    box-shadow: 4px 5px 4px #6f4c3e;
+    object-fit: cover;
+}
+
+.product-preview .preview .fa-solid {
+    position: relative;
+    left: 22.8rem;
+    bottom: 13.9rem;
+    color: #555;
+    font-size: 1.7rem;
+    cursor: pointer;
+    width: 35px;
+    padding: 3px;
+    transition: .4s ease;
+    color: white;
+    text-align: center;
+}
+
+.product-preview .preview .fa-solid:hover {
+    transform: rotate(90deg);
+}
+
+.product-preview .preview h2 {
+    text-transform: capitalize;
+    margin: .5rem 1rem;
+    font-size: 1.3rem;
+}
+
+.product-preview .preview .desc {
+    transition: .8s ease-in;
+    font-size: .9rem;
+    margin: 0 1rem 1rem 1rem;
+    white-space: pre-wrap;
+}
+
+.product-preview .preview .harga-product {
+    width: 100px;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.product-preview .preview .btn-product {
+    background-color: #f2e1d4;
+    border: 2px solid #6f4c3e;
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 0 auto 17.3rem;
+    border-radius: 5px;
+    transition: .6s ease-in-out;
+    cursor: pointer;
+}
+
+.product-preview .preview .btn-product:hover {
+    background-color: transparent;
+    border: 2px solid #5e3a31;
+}
+
+.product-preview .preview .btn-product p {
+    color: black;
+    text-transform: uppercase;
+    font-size: .87rem;
+    transition: .5s linear;
+    padding: 10px;
+    width: 7rem;
+    text-align: center;
+    background-color: #5e3a31;
+}
+
+.product-preview .preview .btn-product p:active {
+    background-color: #f2e1d4;
+}
+
+.product-preview .preview .btn-product:hover p:active {
+    color: #6f4c3e;
+}
+
+.bagian-bawah {
+    height: 100vh;
+}
+
+/* responsive */
+@media screen and (max-width: 1000px) {
+    header .logo-card {
+        left: 205px;
+    }
+    header h1 {
+        margin-right: 59%;
+    }
+    nav ul .quantitys {
+        right: 8rem;
+    }
+    .slider .btn-next {
+        right: 1.9%;
+    }
+    .items {
+        margin-top: 8rem;
+    }
+    .items .name-menu {
+        top: 39rem;
+        left: 26.5rem;
+    }
+    .filters .indicator {
+        left: 14rem;
+        top: 36.5rem;
+    }
+    .product-preview .preview {
+        width: 22rem;
+        height: 30rem;
+    }
+    .product-preview .preview img {
+        width: 29.3vw;
+        height: 13.5rem;
+    }
+    .product-preview .preview .fa-solid {
+        left: 19.8rem;
+        bottom: 13.2rem;
+    }
+    .product-preview .preview h2, .product-preview .preview .desc, .product-preview .preview .harga-product {
+        margin-left: 35px;
+    }
+    .product-preview .preview .btn-product {
+        margin-left: 14rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    header .logo-card {
+        left: 210px;
+    }
+    header h1 {
+        margin-right: 50%;
+    }
+    nav ul .quantitys {
+        right: 6.8rem;
+    }
+    .items .name-menu {
+        top: 39rem;
+        left: 21.8rem;
+    }
+    .filters .indicator {
+        left: 8rem;
+        top: 36.5rem;
+    }
+}
+

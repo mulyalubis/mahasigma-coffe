@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #6f4c3e;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+}
+
+main .aside-nav .side-show::before {
+    content: 'back';
+    position: absolute;
+    left: 95px;
+    top: 19px;
+    text-transform: uppercase;
+}
+
+main .aside-nav .side-show {
+    margin-bottom: 10px;
+    background-color: white;
+    width: 10rem;
+    min-height: 1000vh;
+    transition: .5s ease-in;
+    cursor: pointer;
+    transform: translateX(-10rem);
+}
+
+main .aside-nav .side-show p {
+    margin: 1.3rem 0;
+    font-size: .9rem;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+
+main .aside-nav .side-show .side-1.active, main .aside-nav .side-show .side-2.active {
+    position: relative;
+}
+
+main .aside-nav .side-show .side-1.active::before, main .aside-nav .side-show .side-2.active::before {
+    content: '';
+    background-color: #5e3a31;
+    position: absolute;
+    width: 70px;
+    height: 2px;
+    top: 1.3rem;
+    transition: .4s ease;
+}
+
+main .aside-nav .side-show .side-1.active:hover::before, main .aside-nav .side-show .side-2.active:hover::before {
+    width: 0px;
+}
+
+main .aside-nav .side-show.active {
+    transform: translateX(0);
+}
+
+main .aside-nav .back-close {
+    font-size: 1.5rem;
+    color: black;
+    padding: 1rem;
+}
+
+main .aside-nav .back-close .fa-arrow-left {
+    width: 80px;
+    margin-left: 50px;
+    position: relative;
+}
+
+main .aside-nav .menu-sidebar {
+    position: absolute;
+    left: .5rem;
+    top: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+main .aside-nav .menu-sidebar.active {
+    opacity: 1;
+}
+
+main .aside-nav .item-nav .side-3 a {
+    text-decoration: none;
+    color: black;
+}
+
+main .container-meja {
+    padding-top: .02rem;
+    margin-left: .8rem;
+    width: 100vw;
+    height: 102vh;
+    display: grid;
+    grid-template-columns: repeat(8, 9rem);
+    grid-template-rows: repeat(auto-fill, 11rem);
+    place-content: start;
+    column-gap: 10px;
+    transform: translateX(-145px);
+    transition: .4s linear .1s;
+}
+
+main .container-meja.active {
+    transition: .4s linear .1s;
+    transform: translateX(0);
+    grid-template-columns: repeat(7, 9rem);
+}
+
+main .container-meja .card-meja {
+    background-image: url(../assets/background/DesainTanpaJudul.jpg);
+    background-position: no-repeat;
+    background-position: center 35%;
+    background-size: 120px;
+    text-transform: uppercase;
+    margin: .8rem;
+    padding: .3rem;
+    width: 8rem;
+    height: 150px;
+    border-radius: 6px;
+    font-size: .8rem;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+main .container-meja .card-meja p:nth-child(2) {
+    position: relative;
+    font-size: 1.05rem;
+    top: 20px;
+    text-align: center;
+    color: white;
+}
+
+main .container-meja .card-meja p:nth-child(3) {
+    position: relative;
+    top: 43px;
+    left: 78px;
+}
+
+main .container-meja .card-meja .angka-meja {
+    position: relative;
+    font-size: 1.2rem;
+    left: 47px;
+    text-align: center;
+    bottom: 98px;
+}
+
+
+@media screen and (max-width: 750px) {
+    main {
+        width: 40vw;
+        min-height: 100%;
+    }
+    main .aside-nav .side-show {
+        height: 300rem;
+    }
+    main .container-meja {
+        display: grid;
+        grid-template-columns: repeat(4, 9rem);
+        justify-content: start;
+        margin-left: 40px;
+    }
+    main .container-meja.active {
+        grid-template-columns: repeat(2, 9rem);
+    }
+}

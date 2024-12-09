@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>percobaan tugas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/link-icon/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script type="text/javascript"
+      src="https://app.sandbox.midtrans.com/snap/snap.js"
+      data-client-key="SB-Mid-client-ULVFW61h78-5MNX4"></script>
+</head>
+<body>
+    <header>
+        <h1>MahaSigma</h1>
+        <img src="../assets/logo/MAHASIGMA3.png" alt="" class="logo-card">
+        <nav>
+            <ul>
+                <li><a href="../form_login/login.php">Home</a></li>
+                <div class="open-shopping active">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="quantitys">0</span>
+                </div>
+                <div class="card-shopping">
+                    <h2 class="card-title">your order</h2>
+                    <div class="list-card-shopping">
+                        
+                    </div>
+                    <div class="total">
+                        <p class="total-title">total</p>
+                        <p class="total-price">0</p>
+                    </div>
+                    <button class="btn-buy">buy</button>
+                    <div class="close-shopping">close</div>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- slider image -->
+        <section class="slider">
+            <ul class="list-slider">
+                <li class="slider-item active">
+                    <div class="slider-img">
+                        <img src="../assets/sliderImgPromo/promo-1.jpg" alt="">
+                    </div>
+                </li>
+                <li class="slider-item">
+                    <div class="slider-img">
+                        <img src="../assets/sliderImgPromo/promo-2.jpg" alt="">
+                    </div>
+                </li>
+                <li class="slider-item">
+                    <div class="slider-img">
+                        <img src="../assets/sliderImgPromo/promo-3.jpg" alt="">
+                    </div>
+                </li>
+            </ul>
+            <button class="btn-prev">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="btn-next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </section>
+
+
+        <!-- filter menu -->
+
+        <div class="filters">
+            <ul class="indicator">
+                <li data-filter="apptizer">apptizer</li>
+                <li data-filter="main-course">main course</li>
+                <li data-filter="desert">desert</a></li>
+                <li data-filter="coffe">coffe</li>
+                <li data-filter="non-coffe">non coffe</li>
+            </ul>
+        </div>
+
+
+        <!-- menu pesanan -->
+        <div class="items">
+            <h2 class="name-menu">Menu kami</h2>
+            <div class="menu">
+                <div class="card-menu" data-name="p-1" data-category="apptizer">
+                    <img src="../assets/imgMenu/menu-apptizer/apptizer2.jpg" alt="">
+                    <p class="nama-makanan">sandwich</p>
+                    <p class="harga-makanan">12rb</p>
+                </div>
+                <div class="card-menu" data-name="p-2" data-category="main-course">
+                    <img src="../assets/imgMenu/menu-main-course/main-course.jpg" alt="">
+                    <p class="nama-makanan">daging telur</p>
+                    <p class="harga-makanan">25rb</p>
+                </div>
+                <div class="card-menu" data-name="p-3" data-category="desert">
+                    <img src="../assets/imgMenu/menu-desert/desert.jpg" alt="">
+                    <p class="nama-makanan">kue manis</p>
+                    <p class="harga-makanan">8rb</p>
+                </div>
+                <div class="card-menu" data-name="p-4" data-category="coffe">
+                    <img src="../assets/imgMenu/menu-coffe/coffe.jpg" alt="">
+                    <p class="nama-makanan">coffe ice</p>
+                    <p class="harga-makanan">10rb</p>
+                </div>
+                <div class="card-menu" data-name="p-5" data-category="non-coffe">
+                    <img src="../assets/imgMenu/menu-non-coffe/non-coffe.jpg" alt="">
+                    <p class="nama-makanan">jeruk nipis</p>
+                    <p class="harga-makanan">12rb</p>
+                </div> 
+
+
+                <!-- hidden -->
+                <div class="card-menu" data-name="p-6" data-category="apptizer">
+                    <img src="../assets/imgMenu/menu-apptizer/apptizer3.jpg" alt="">
+                    <p class="nama-makanan">roti kering</p>
+                    <p class="harga-makanan">5rb</p>
+                </div>
+                <div class="card-menu" data-name="p-7" data-category="main-course">
+                    <img src="../assets/imgMenu/menu-main-course/main-course4.jpg" alt="">
+                    <p class="nama-makanan">nasi goreng telur</p>
+                    <p class="harga-makanan">10rb</p>
+                </div>
+                <div class="card-menu" data-name="p-8" data-category="main-course">
+                    <img src="../assets/imgMenu/menu-main-course/main-course2.jpg" alt="">
+                    <p class="nama-makanan">sayap bakar</p>
+                    <p class="harga-makanan">15rb</p>
+                </div>
+                <div class="card-menu" data-name="p-9" data-category="apptizer">
+                    <img src="../assets/imgMenu/menu-apptizer/apptizer.jpg" alt="">
+                    <p class="nama-makanan">dimsum</p>
+                    <p class="harga-makanan">9rb</p>
+                </div>
+                <div class="card-menu" data-name="p-10" data-category="apptizer">
+                    <img src="../assets/imgMenu/menu-apptizer/apptizer7.jpg" alt="">
+                    <p class="nama-makanan">roti daging</p>
+                    <p class="harga-makanan">12rb</p>
+                </div>
+                <div class="card-menu" data-name="p-11" data-category="coffe">
+                    <img src="../assets/imgMenu/menu-coffe/coffe7.jpg" alt="">
+                    <p class="nama-makanan">coffe americano</p>
+                    <p class="harga-makanan">11rb</p>
+                </div>
+                <div class="card-menu" data-name="p-12" data-category="coffe">
+                    <img src="../assets/imgMenu/menu-coffe/coffe6.jpg" alt="">
+                    <p class="nama-makanan">black coffe</p>
+                    <p class="harga-makanan">7rb</p>
+                </div>
+                <div class="card-menu" data-name="p-13" data-category="coffe">
+                    <img src="../assets/imgMenu/menu-coffe/coffe5.jpg" alt="">
+                    <p class="nama-makanan">Flat White coffe</p>
+                    <p class="harga-makanan">8rb</p>
+                </div>
+                <div class="card-menu" data-name="p-14" data-category="apptizer">
+                    <img src="../assets/imgMenu/menu-apptizer/apptizer5.jpg" alt="">
+                    <p class="nama-makanan">batagor lipat</p>
+                    <p class="harga-makanan">8rb</p>
+                </div>
+                <div class="card-menu" data-name="p-15" data-category="non-coffe">
+                    <img src="../assets/imgMenu/menu-non-coffe/non-coffe4.jpg" alt="">
+                    <p class="nama-makanan">ice cendol</p>
+                    <p class="harga-makanan">8rb</p>
+                </div>
+                <div class="card-menu" data-name="p-16" data-category="main-course">
+                    <img src="../assets/imgMenu/menu-main-course/main-course7.jpg" alt="">
+                    <p class="nama-makanan">sate ayam</p>
+                    <p class="harga-makanan">12rb</p>
+                </div>
+                <div class="card-menu" data-name="p-17" data-category="non-coffe">
+                    <img src="../assets/imgMenu/menu-non-coffe/non-coffe3.jpg" alt="">
+                    <p class="nama-makanan">ice susu</p>
+                    <p class="harga-makanan">10rb</p>
+                </div>
+                <div class="card-menu" data-name="p-18" data-category="apptizer">
+                    <img src="../assets/imgMenu/menu-apptizer/apptizer4.jpg" alt="">
+                    <p class="nama-makanan">Bola daging</p>
+                    <p class="harga-makanan">8rb</p>
+                </div>
+                <div class="card-menu" data-name="p-19" data-category="non-coffe">
+                    <img src="../assets/imgMenu/menu-non-coffe/non-coffe2.jpg" alt="">
+                    <p class="nama-makanan">ice cincau</p>
+                    <p class="harga-makanan">12rb</p>
+                </div>
+                <div class="card-menu" data-name="p-20" data-category="non-coffe">
+                    <img src="../assets/imgMenu/menu-non-coffe/non-coffe7.jpg" alt="">
+                    <p class="nama-makanan">jus semangka</p>
+                    <p class="harga-makanan">10rb</p>
+                </div>
+                <div class="card-menu" data-name="p-21" data-category="apptizer">
+                    <img src="../assets/imgMenu/menu-apptizer/apptizer6.jpg" alt="">
+                    <p class="nama-makanan">Sosis mie</p>
+                    <p class="harga-makanan">11rb</p>
+                </div>
+                <div class="card-menu" data-name="p-22" data-category="main-course">
+                    <img src="../assets/imgMenu/menu-main-course/main-course3.jpg" alt="">
+                    <p class="nama-makanan">daging sapi + nasi</p>
+                    <p class="harga-makanan">17rb</p>
+                </div>
+                <div class="card-menu" data-name="p-23" data-category="coffe">
+                    <img src="../assets/imgMenu/menu-coffe/coffe4.jpg" alt="">
+                    <p class="nama-makanan">Doppio coffe</p>
+                    <p class="harga-makanan">10rb</p>
+                </div>
+                <div class="card-menu" data-name="p-24" data-category="non-coffe">
+                    <img src="../assets/imgMenu/menu-non-coffe/non-coffe5.jpg" alt="">
+                    <p class="nama-makanan">ice tea</p>
+                    <p class="harga-makanan">12rb</p>
+                </div>
+                <div class="card-menu" data-name="p-25" data-category="non-coffe">
+                    <img src="../assets/imgMenu/menu-non-coffe/non-coffe6.jpg" alt="">
+                    <p class="nama-makanan">ice mactha latte</p>
+                    <p class="harga-makanan">15rb</p>
+                </div>
+                <div class="card-menu" data-name="p-26" data-category="coffe">
+                    <img src="../assets/imgMenu/menu-coffe/coffe3.jpg" alt="">
+                    <p class="nama-makanan">Macchiato</p>
+                    <p class="harga-makanan">12rb</p>
+                </div>
+                <div class="card-menu" data-name="p-27" data-category="desert">
+                    <img src="../assets/imgMenu/menu-desert/desert3.jpg" alt="">
+                    <p class="nama-makanan">red velvet</p>
+                    <p class="harga-makanan">10rb</p>
+                </div>
+                <div class="card-menu" data-name="p-28" data-category="coffe">
+                    <img src="../assets/imgMenu/menu-coffe/coffe2.jpg" alt="">
+                    <p class="nama-makanan">cappucino</p>
+                    <p class="harga-makanan">8rb</p>
+                </div>
+                <div class="card-menu" data-name="p-29" data-category="main-course">
+                    <img src="../assets/imgMenu/menu-main-course/main-course6.jpg" alt="">
+                    <p class="nama-makanan">tahu asam manis</p>
+                    <p class="harga-makanan">8rb</p>
+                </div>
+                <div class="card-menu" data-name="p-30" data-category="main-course">
+                    <img src="../assets/imgMenu/menu-main-course/main-course5.jpg" alt="">
+                    <p class="nama-makanan">nasi kuning</p>
+                    <p class="harga-makanan">11rb</p>
+                </div>
+                <div class="card-menu" data-name="p-31" data-category="desert">
+                    <img src="../assets/imgMenu/menu-desert/desert2.jpg" alt="">
+                    <p class="nama-makanan">red berry</p>
+                    <p class="harga-makanan">10rb</p>
+                </div>
+                <div class="card-menu" data-name="p-32" data-category="desert">
+                    <img src="../assets/imgMenu/menu-desert/desert7.jpg" alt="">
+                    <p class="nama-makanan">kue black berry</p>
+                    <p class="harga-makanan">10rb</p>
+                </div>
+                <div class="card-menu" data-name="p-33" data-category="desert">
+                    <img src="../assets/imgMenu/menu-desert/desert5.jpg" alt="">
+                    <p class="nama-makanan">eskrim strawberry</p>
+                    <p class="harga-makanan">15rb</p>
+                </div>
+                <div class="card-menu" data-name="p-34" data-category="desert">
+                    <img src="../assets/imgMenu/menu-desert/desert4.jpg" alt="">
+                    <p class="nama-makanan">eskrim coklat</p>
+                    <p class="harga-makanan">15rb</p>
+                </div>
+                <div class="card-menu" data-name="p-35" data-category="desert">
+                    <img src="../assets/imgMenu/menu-desert/desert6.jpg" alt="">
+                    <p class="nama-makanan">kue kering</p>
+                    <p class="harga-makanan">10rb</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- preview detail menu -->
+        <div class="product-preview">
+            <div class="preview" data-target="p-1">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-apptizer/apptizer2.jpg" alt="">
+                <h2 class="name-preview">sandwich</h2>
+                <p class="desc">gabungan telur dan sayuran yang sehat, menciptakan sensasi rasa nikmat saat dimakan</p>
+                <div class="harga-product">Rp 12,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-2">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-main-course/main-course.jpg" alt="">
+                <h2 class="name-preview">Steak</h2>
+                <p class="desc">Telur dan daging yang sangat mengenyangkan, juga memiliki aroma smoky saat di sajikan</p>
+                <div class="harga-product">Rp 25,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-3">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-desert/desert.jpg" alt="">
+                <h2 class="name-preview">kue manis</h2>
+                <p class="desc">desert yang cocok setelah makan makanan berat</p>
+                <div class="harga-product">Rp 8,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-4">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-coffe/coffe.jpg" alt="">
+                <h2 class="name-preview">coffe ice</h2>
+                <p class="desc">biji kopi yang di siapkan dari dari belanda dan memiliki rasa khas spanyol</p>
+                <div class="harga-product">Rp 10,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-5">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-non-coffe/non-coffe.jpg" alt="">
+                <h2 class="name-preview">jeruk nipis</h2>
+                <p class="desc">jeruk nipis yang segar, yang dipetik langsung dari jepang</p>
+                <div class="harga-product">Rp 12,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-6">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-apptizer/apptizer3.jpg" alt="">
+                <h2 class="name-preview">roti kering</h2>
+                <p class="desc">roti yang yang dimasak dengan sempurna dan di gabungkan dengan asap gunung fuji</p>
+                <div class="harga-product">Rp 5,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-7">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-main-course/main-course4.jpg" alt="">
+                <h2 class="name-preview">nasi goreng telur</h2>
+                <p class="desc">nasi goreng yang telah digabunggkan dengan asap, supaya memiliki aroma smoky</p>
+                <div class="harga-product">Rp 10,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-8">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-main-course/main-course2.jpg" alt="">
+                <h2 class="name-preview">sayap bakar</h2>
+                <p class="desc">sayap ayam yang dibakar dengan api panas dan di sajikan dengan saus manis dari kami</p>
+                <div class="harga-product">Rp 15,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-9">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-apptizer/apptizer.jpg" alt="">
+                <h2 class="name-preview">dimsum</h2>
+                <p class="desc">diimpor lansung dari jepang dengan tamburan beberaoa bahan dari eropa </p>
+                <div class="harga-product">Rp 9,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-10">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-apptizer/apptizer7.jpg" alt="">
+                <h2 class="name-preview">roti daging</h2>
+                <p class="desc">roti yang dilapisi daging dan telur setengah matang dan di bakar dengan suhu tinggi</p>
+                <div class="harga-product">Rp 12,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-11">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-coffe/coffe7.jpg" alt="">
+                <h2 class="name-preview">coffe americano</h2>
+                <p class="desc">biji kopi dari amerika yang diproses</p>
+                <div class="harga-product">Rp 11,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-12">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-coffe/coffe6.jpg" alt="">
+                <h2 class="name-preview">Black coffe</h2>
+                <p class="desc">biji hitam nikmat yang sangat beraroma</p>
+                <div class="harga-product">Rp 7,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-13">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-coffe/coffe5.jpg" alt="">
+                <h2 class="name-preview">Flat white coffe</h2>
+                <p class="desc">biji kopi putih yang manis dan ada pahit pahitnya sedikit</p>
+                <div class="harga-product">Rp 8,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-14">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-apptizer/apptizer5.jpg" alt="">
+                <h2 class="name-preview">batagor lipat</h2>
+                <p class="desc">saat memakannya akan merasakan sensasi penggabungan lapisan tepung dan daging</p>
+                <div class="harga-product">Rp 8,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-15">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-non-coffe/non-coffe4.jpg" alt="">
+                <h2 class="name-preview">ice cendol</h2>
+                <p class="desc">kesegaran nikmat yang berasal dari cendol</p>
+                <div class="harga-product">Rp 8,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-16">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-main-course/main-course7.jpg" alt="">
+                <h2 class="name-preview">sate ayam</h2>
+                <p class="desc">bahan dari daging ayam amerika yang di boykot</p>
+                <div class="harga-product">Rp 15,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-17">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-non-coffe/non-coffe3.jpg" alt="">
+                <h2 class="name-preview">ice susu</h2>
+                <p class="desc">susu yang segar dari pengunungan himalaya</p>
+                <div class="harga-product">Rp 10,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-18">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-apptizer/apptizer4.jpg" alt="">
+                <h2 class="name-preview">bola daging</h2>
+                <p class="desc">daging yang dibulatkan, saat dimakan akan menyebar ke seluruh mulut</p>
+                <div class="harga-product">Rp 8,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-19">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-non-coffe/non-coffe2.jpg" alt="">
+                <h2 class="name-preview">ice cincau</h2>
+                <p class="desc">minuman segar yang membuat tenggorokan menjadi dingin</p>
+                <div class="harga-product">Rp 12,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-20">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-non-coffe/non-coffe7.jpg" alt="">
+                <h2 class="name-preview">jus semangka</h2>
+                <p class="desc">jus semangka yang segar, yang buahnya dipetik langsung dari belanda</p>
+                <div class="harga-product">Rp 10,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-21">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-apptizer/apptizer6.jpg" alt="">
+                <h2 class="name-preview">sosis mie</h2>
+                <p class="desc">saat dimakan akan terasa seperti ada campuran mie didalamnya</p>
+                <div class="harga-product">Rp 11,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-22">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-main-course/main-course3.jpg" alt="">
+                <h2 class="name-preview">daging sapi + nasi</h2>
+                <p class="desc">dengan sapi pilihan dan aroma smoky, saat di sajikan beraroma pedas dan gurih</p>
+                <div class="harga-product">Rp 17,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-23">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-coffe/coffe4.jpg" alt="">
+                <h2 class="name-preview">doppia coffe</h2>
+                <p class="desc">campuran fermentasi biji kopi yang di petik dari brazil</p>
+                <div class="harga-product">Rp 10,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-24">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-non-coffe/non-coffe5.jpg" alt="">
+                <h2 class="name-preview">ice tea</h2>
+                <p class="desc">teh yang berasal dari cina dan alami</p>
+                <div class="harga-product">Rp 12,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-25">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-non-coffe/non-coffe6.jpg" alt="">
+                <h2 class="name-preview">ice mactha latte</h2>
+                <p class="desc">bahan yang terbuat dari manisnya rumput daripada punya tetangga</p>
+                <div class="harga-product">Rp 15,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-26">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-coffe/coffe3.jpg" alt="">
+                <h2 class="name-preview">macchiato</h2>
+                <p class="desc">kopi manis dengan cream sedikit pahit</p>
+                <div class="harga-product">Rp 12,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-27">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-desert/desert3.jpg" alt="">
+                <h2 class="name-preview">red velvet</h2>
+                <p class="desc">kue dengan rasa manis yang sempurna dan meleleh di mulut</p>
+                <div class="harga-product">Rp 10,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-28">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-coffe/coffe2.jpg" alt="">
+                <h2 class="name-preview">capuccino</h2>
+                <p class="desc">biji kopi setngah yang sangat manis dan sedikit pahit</p>
+                <div class="harga-product">Rp 8,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-29">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-main-course/main-course6.jpg" alt="">
+                <h2 class="name-preview">tahu asam manis</h2>
+                <p class="desc">tahu dari cina yang sudah di fermentasi dengan sempurna</p>
+                <div class="harga-product">Rp 8,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-30">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-main-course/main-course5.jpg" alt="">
+                <h2 class="name-preview">nasi kuning</h2>
+                <p class="desc">nasi tumpeng yang telah di masak selama 12 jam</p>
+                <div class="harga-product">Rp 11,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-31">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-desert/desert2.jpg" alt="">
+                <h2 class="name-preview">red berry</h2>
+                <p class="desc">kue lezat dengan buah berry terbanyak</p>
+                <div class="harga-product">Rp 10,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-32">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-desert/desert7.jpg" alt="">
+                <h2 class="name-preview">kue black berry</h2>
+                <p class="desc">dengan rasa asem dan sedikit manis, saat di gigit akan terasa nikmat </p>
+                <div class="harga-product">Rp 11,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-33">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-desert/desert5.jpg" alt="">
+                <h2 class="name-preview">eskrim strawberry</h2>
+                <p class="desc">eskrim terbuat dari bahan-bahan eropa yang sangat bagus</p>
+                <div class="harga-product">Rp 15,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-34">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-desert/desert4.jpg" alt="">
+                <h2 class="name-preview">eskrim coklat</h2>
+                <p class="desc">eskrim yang manis dan sangat menyegarkan dan bahan-bahan terpilih</p>
+                <div class="harga-product">Rp 15,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+            <div class="preview" data-target="p-35">
+                <i class="fa-solid fa-xmark"></i>
+                <img src="../assets/imgMenu/menu-desert/desert6.jpg" alt="">
+                <h2 class="name-preview">kue kering</h2>
+                <p class="desc">kue yang enak saat di makan bersama teh hangat</p>
+                <div class="harga-product">Rp 10,000</div>
+                <div class="btn-product">
+                    <p>add now</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bagian-bawah"></div>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
