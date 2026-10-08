@@ -1,18 +1,20 @@
 <?php
-// /*Install Midtrans PHP Library (https://github.com/Midtrans/midtrans-php)
-// composer require midtrans/midtrans-php
+// Load file .env secara manual (tanpa composer)
+$envPath = dirname(__FILE__) . '/../.env'; // Sesuaikan lokasi file .env jika berada di root project
 
-// Alternatively, if you are not using **Composer**, you can download midtrans-php library
-// (https://github.com/Midtrans/midtrans-php/archive/master.zip), and then require
-// the file manually.
-
+if (file_exists($envPath)) {
+    $env = parse_ini_file($envPath);
+    $serverKey = $env['MIDTRANS_SERVER_KEY'] ?? '';
+} else {
+    // Fallback atau pesan error jika .env tidak ada
+    die(json_encode(['error' => 'File .env tidak ditemukan!']));
+}
 
 require_once dirname(__FILE__) . '/midtrans-php-master/Midtrans.php';
 
-// //SAMPLE REQUEST START HERE
+// Set your Merchant Server Key menggunakan variabel yang sudah dibaca
+\Midtrans\Config::$serverKey = $serverKey;
 
-// Set your Merchant Server Key
-\Midtrans\Config::$serverKey = 'SB-Mid-server-AGCw2FfjttrO-H12CM3cPmeQ';
 // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
 \Midtrans\Config::$isProduction = false;
 // Set sanitization on (default)
@@ -21,7 +23,8 @@ require_once dirname(__FILE__) . '/midtrans-php-master/Midtrans.php';
 \Midtrans\Config::$is3ds = true;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $items = json_decode(file_get_contents('php://input'), true)['items'];
+    $input = json_decode(file_get_contents('php://input'), true);
+    $items = $input['items'] ?? [];
 
     // Hitung total harga
     $totalAmount = 0;
@@ -40,12 +43,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 'id' => $item['id'],
                 'price' => $item['price'],
                 'quantity' => $item['quantity'],
-                'name' => $item['id'],
+                'name' => $item['name'] ?? $item['id'], // Mengambil nama item dengan aman
             ];
         }, $items)
     ];
 
-    // Buat transaksi
-    $snapToken = \Midtrans\Snap::getSnapToken($params);
-    echo $snapToken;
+    try {
+        // Buat transaksi
+        $snapToken = \Midtrans\Snap::getSnapToken($params);
+        echo $snapToken;
+    } catch (Exception $e) {
+        http_response_code(500);
+        echo json_encode(['error' => $e->getMessage()]);
+    }
 }
+?>
